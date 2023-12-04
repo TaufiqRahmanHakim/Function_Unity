@@ -41,11 +41,12 @@ private PlayerInput _playerInput;
 public GameObject CinemachineCameraTarget;
 
 private const float _threshold = 0.01f;
-public bool LockCameraPosition = false;
+public float CameraAngleOverride = 0.0f;
 
 private float _cinemachineTargetYaw;
 private float _cinemachineTargetPitch;
 
+public bool LockCameraPosition = false;
 private bool IsCurrentDeviceMouse
         {
             get
