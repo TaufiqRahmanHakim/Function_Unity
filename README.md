@@ -58,6 +58,19 @@ private bool IsCurrentDeviceMouse
 #endif
             }
         }
+[NonSerialized] private InputUser m_InputUser;
+public string currentControlScheme
+        {
+            get
+            {
+                if (!m_InputUser.valid)
+                    return null;
+
+                var scheme = m_InputUser.controlScheme;
+                return scheme?.name;
+            }
+        }
+
 
 private void CameraRotation()
         {
