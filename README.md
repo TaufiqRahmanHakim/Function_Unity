@@ -36,6 +36,11 @@ Destroy(this); //can destroy individual components without affecting the GameObj
 
 ## Camera Rotation
 ```csharp
+[Tooltip("How far in degrees can you move the camera up")]
+public float TopClamp = 70.0f;
+
+[Tooltip("How far in degrees can you move the camera down")]
+public float BottomClamp = -30.0f;
 private StarterAssetsInputs _input;
 private PlayerInput _playerInput;
 public GameObject CinemachineCameraTarget;
